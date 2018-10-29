@@ -1,0 +1,295 @@
+
+@charset "UTF-8";
+/*css 初始化 */
+* { margin:0; padding:0; box-sizing: border-box} 
+p {margin:0 0 8px} 
+ul, ol { list-style:none; }
+select, input { vertical-align:middle;}
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; } /*防止拖动*/
+img {border:0; vertical-align:middle; }  /*  去掉图片低测默认的3像素空白缝隙，或者用display：block也可以*/
+table { border-collapse:collapse; }
+html{
+    /*background:#f6f8f6;*/
+    /* background: url('../img/bg_1.png'); */
+    background-color: #ffffff;
+}
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color:#f6f6f6;
+    font-family:'Microsoft YaHei','Arial','Verdana';
+    /*font-size:15px;*/
+    font-size:14px;
+    color:#333;
+    background:#f9f9f9;
+    /*box-sizing:border-box;*/
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+}
+.clearfix:before,.clearfix:after {  /*清除浮动*/
+    content:'';
+    height:0;
+    line-height:0;
+    display:block;
+    visibility:hidden;
+    clear:both;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {text-decoration:none;cursor:pointer }
+a:focus {color:#538dd5;text-decoration:none}  /*点击时状态 。*/
+a:active {color:#538dd5;text-decoration:none}  /*点击时状态 。*/
+a:link {color: #1a1a1a;text-decoration:none}   /*未访问时的状态 。*/
+a:visited {color: #1a1a1a;text-decoration:none} /* 已访问过的状态 。*/
+a:hover {color: #1a1a1a;text-decoration:none} 
+/*a:hover {color: #FF00FF} /* 鼠标移动到链接上时的状态。*/
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;margin:0;padding:0}  /*设置h标签的大小，设置跟父亲一样大的字体font-size:100%;*/
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+
+input::-webkit-input-placeholder{
+  color:#c0c4cc;
+}
+input::-moz-placeholder{   /* Mozilla Firefox 19+ */
+  color:#c0c4cc;
+}
+input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
+  color:#c0c4cc;
+}
+input:-ms-input-placeholder{  /* Internet Explorer 10-11 */ 
+  color:#c0c4cc;
+}
+
+/*自设样式*/
+.if-data-empty {
+   text-align:center;
+   line-height:200px;
+   font-size:15px;
+   color:#ccc;
+   width:100%;
+}
+.my-tit {
+  font-size:15px;
+  text-align: center;
+  line-height: 32px;
+}
+.txt-left {
+  text-align: left;
+}
+.txt-center {
+  text-align: center;
+}
+
+.overflow-row-1 {   
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+@media screen and (max-width:768px) {
+  .overflow-row-1 {   
+      display: -webkit-box;    
+      -webkit-box-orient: vertical;    
+      -webkit-line-clamp: 1;    
+      overflow: hidden;
+      word-break:break-all;
+      white-space:normal;
+  }
+}
+/* white-space:normal; word-break:break-all; flex 中文本强制换行 */
+/* 
+4 white-space:nowrap; 强制不换行，都起作用
+4 white-space:normal;; 默认换行，都起作用
+5 white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现 */
+
+.overflow-row-2,.overflow-row-3,.overflow-row-4,.overflow-row-5,.overflow-row-8,.overflow-row-13,.overflow-row-14,.overflow-row-1-x {
+    display: -webkit-box;    
+    -webkit-box-orient: vertical;    
+    -webkit-line-clamp: 2;    
+    overflow: hidden;
+    word-break:break-all;
+    white-space:normal;
+}
+.overflow-row-1-x {    
+    -webkit-line-clamp: 1;    
+}
+.overflow-row-3 {    
+    -webkit-line-clamp: 3;    
+}
+.overflow-row-4 {    
+    -webkit-line-clamp: 4;    
+}
+.overflow-row-5 {    
+    -webkit-line-clamp: 5;    
+}
+.overflow-row-8 {    
+    -webkit-line-clamp: 8;    
+}
+.overflow-row-13 {    
+    -webkit-line-clamp: 13;    
+}
+.overflow-row-14 {    
+    -webkit-line-clamp: 14;    
+}
+
+/* 数据为空样式 */
+.show-empty-data {
+    font-size:14px;
+    color:#ccc;
+    text-align: center;
+    padding-top:22px;
+    display:block;
+    flex: 0  0 100%;
+}
+
+
+@media screen and (max-width:768px){
+  .my-tit {
+    font-size:16px;
+  }
+    
+}
+
+.bx {
+  max-width:1100px;
+  margin:0 auto;
+}
+.bbx {
+  max-width:900px;
+  margin:0 auto;
+}
+.m-auto {
+  margin:0 auto;
+}
+.t-center {
+  text-align:center;
+}
+
+/*按钮公共样式*/
+/* cupid green (inspired by okcupid.com)
+*******************************************************************************/
+button.cupid-green {
+  background-color: #7fbf4d;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #7fbf4d), color-stop(100%, #63a62f));
+  background-image: -webkit-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -moz-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -ms-linear-gradient(top, #7fbf4d, #63a62f);
+  background-image: -o-linear-gradient(top, #7fbf4d, #63a62f);
+  /*background-image: linear-gradient(top, #7fbf4d, #63a62f);*/
+  border: 1px solid #63a62f;
+  border-bottom: 1px solid #5b992b;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 1px 0 0 #96ca6d;
+  box-shadow: inset 0 1px 0 0 #96ca6d;
+  color: #fff;
+  font: bold 14px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 7px 0 8px 0;
+  text-align: center;
+  text-shadow: 0 -1px 0 #4c9021;
+  width: 100px; }
+  button.cupid-green:hover {
+    background-color: #76b347;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #76b347), color-stop(100%, #5e9e2e));
+    background-image: -webkit-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -moz-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -ms-linear-gradient(top, #76b347, #5e9e2e);
+    background-image: -o-linear-gradient(top, #76b347, #5e9e2e);
+    /*background-image: linear-gradient(top, #76b347, #5e9e2e);*/
+    -webkit-box-shadow: inset 0 1px 0 0 #8dbf67;
+    box-shadow: inset 0 1px 0 0 #8dbf67;
+    cursor: pointer; }
+  button.cupid-green:active {
+    border: 1px solid #5b992b;
+    border-bottom: 1px solid #538c27;
+    -webkit-box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 8px 4px #548c29, 0 1px 0 0 #eeeeee; }
+
+    /* clean gray
+*******************************************************************************/
+button.clean-gray,.clean-gray-nohover{
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #eeeeee), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+  background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+  /*background-image: linear-gradient(top, #eeeeee, #cccccc);*/
+  border: 1px solid #ccc;
+  border-bottom: 1px solid #bbb;
+  border-radius: 3px;
+  color: #333;
+  font: bold 14px/1 "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+  padding: 8px 0;
+  text-align: center;
+  text-shadow: 0 1px 0 #eee;
+  width: 100px; }
+  button.clean-gray:hover {
+    background-color: #dddddd;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #dddddd), color-stop(100%, #bbbbbb));
+    background-image: -webkit-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -moz-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -ms-linear-gradient(top, #dddddd, #bbbbbb);
+    background-image: -o-linear-gradient(top, #dddddd, #bbbbbb);
+    /*background-image: linear-gradient(top, #dddddd, #bbbbbb);*/
+    border: 1px solid #bbb;
+    border-bottom: 1px solid #999;
+    cursor: pointer;
+    text-shadow: 0 1px 0 #ddd; }
+  button.clean-gray:active {
+    border: 1px solid #aaa;
+    border-bottom: 1px solid #888;
+    -webkit-box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee;
+    box-shadow: inset 0 0 5px 2px #aaaaaa, 0 1px 0 0 #eeeeee; }
+
+    /* punch
+*******************************************************************************/
+button.punch {
+  background: #3257a7;
+  border-top: 1px solid #38538c;
+  border-right: 1px solid #1f2d4d;
+  border-bottom: 1px solid #151e33;
+  border-left: 1px solid #1f2d4d;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 6px 0 #1f3053, 0 8px 4px 1px #111111;
+  box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 6px 0 #1f3053, 0 6px 4px 1px #111111;
+  color: #fff;
+  font: bold 14px/1 "helvetica neue", helvetica, arial, sans-serif;
+  margin-bottom: 10px;
+  padding: 10px 0 10px 0;
+  text-align: center;
+  text-shadow: 0 -1px 1px #1e2d4d;
+  width: 120px;
+  -webkit-background-clip: padding-box; }
+  button.punch:hover {
+    -webkit-box-shadow: inset 0 0 20px 1px #87adff, 0 1px 0 #1d2c4d, 0 6px 0 #1f3053, 0 8px 4px 1px #111111;
+    box-shadow: inset 0 0 20px 1px #87adff, 0 1px 0 #1d2c4d, 0 6px 0 #1f3053, 0 6px 4px 1px #111111;
+    cursor: pointer; }
+  button.punch:active {
+    -webkit-box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    box-shadow: inset 0 1px 10px 1px #5c8bee, 0 1px 0 #1d2c4d, 0 2px 0 #1f3053, 0 4px 3px 0 #111111;
+    margin-top: 3px; }
+  button.punch.default {
+    background:#688fde
+     }
+
+  @media screen and (max-width:768px){
+      .max-768 {
+        display:block;
+      }
+      .min-768 {
+        display:none;
+      }
+  }
+  @media screen and (min-width:769px){
+      .max-768 {
+        display:none;
+      }
+      .min-768 {
+        display:block;
+      }
+  }
+     

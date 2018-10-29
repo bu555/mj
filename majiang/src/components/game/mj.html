@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./majiang.js"></script>
+    <script>
+        let mj = new Majiang([{name:'n1',uid:'u11',chip:20,zhuang:true},{name:'n2',uid:'u22',chip:20,zhuang:true}],4)
+        console.log('mmmjjj',mj);
+        console.log('mmmjjj',mj.player);
+        let uid = mj.player[1].uid
+        // 整理
+        mj.sortPai(uid) 
+        // 摸牌
+        mj.moPai(uid)
+        // 打一張
+        // mj.player[1].pai = mj.player[1].pai.
+        mj.player[1].pai = mj.player[1].pai.concat(['m5','m5'])
+        // 打牌 u11打m5
+        mj.check('u11','m5')
+        // 执行action {activeAction: {actionPai: "m5",actionType: "peng"},uid:u22}
+
+        console.log('mmmjjj',mj.player[1]);
+    </script>
+</body>
+</html>

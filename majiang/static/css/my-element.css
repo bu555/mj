@@ -1,0 +1,51 @@
+.el-message-box {
+  width: 420px;
+  border-radius: 3px;
+  padding-bottom: 0;
+}
+.el-message-box .el-message-box__header {
+  border-bottom: 1px solid #e9e9e9;
+}
+.el-message-box .el-message-box__content {
+  padding: 15px 15px 20px;
+}
+.el-message-box .el-message-box__content > div:nth-child(1) {
+  top: 27px;
+}
+.el-message-box .el-message-box__content .el-message-box__message {
+  padding-bottom: 10px;
+}
+.el-message-box .el-message-box__btns {
+  display: flex;
+  padding: 0;
+  height: 42px;
+  border-top: 1px solid #f3f3f3;
+}
+.el-message-box .el-message-box__btns button {
+  flex: 1;
+  border: none;
+  margin: 0;
+  border-radius: 0;
+  color: #555;
+  background-color: #fff;
+  font-size: 13px;
+}
+.el-message-box .el-message-box__btns button:hover {
+  background: #fafafa;
+}
+.el-message-box .el-message-box__btns button:nth-child(1) {
+  border-right: 1px solid #f2f2f2;
+}
+@media screen and (max-width: 500px) {
+  .el-message-box {
+    width: 80%;
+  }
+}
+/*提示信息 样式*/
+.el-message {
+  top: 122px;
+  min-width: 290px;
+}
+.el-loading-mask {
+  background-color: rgba(255, 255, 255, 0.5);
+}
